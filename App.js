@@ -8,7 +8,7 @@ export default function App() {
         style={[styles.rover,{flex:.75}]}
         source={require('./assets/spirit.jpg')}>
       </Image>
-      <Text style = {{flex:.25}}>  Le Rover Opportunity</Text>
+      <Text style = {[styles.text,{flex:.25}]}>  Le Rover Opportunity</Text>
     </View>
   );
 }
@@ -24,5 +24,11 @@ const styles = StyleSheet.create({
   },
   rover: {
    width: '75%'
+  },
+  text : {
+    display:'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection : 'column'
   }
 });
