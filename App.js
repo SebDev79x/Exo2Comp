@@ -1,11 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Ma première application à la Manu</Text>
-      <StatusBar style="auto" />
+      <Image
+        style={[styles.rover,{flex:.75}]}
+        source={require('./assets/spirit.jpg')}>
+      </Image>
+      <Text style = {{flex:.25}}>  Le Rover Opportunity</Text>
     </View>
   );
 }
@@ -13,8 +16,13 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: 'row'
+    /* ,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center', */
   },
+  rover: {
+   width: '75%'
+  }
 });
